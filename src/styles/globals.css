@@ -1,0 +1,20 @@
+/* header font */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
+/* body font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.link {
+		@apply cursor-pointer px-1 mx-6 uppercase font-heading text-gray-300;
+	}
+	.nav-icon {
+		@apply h-5 w-5 text-gray-300 mx-3;
+	}
+	.button {
+		@apply py-2 px-10 mt-8 text-shop_ave text-xs md:text-sm rounded-sm focus:outline-none bg-shop_ave-yellow hover:bg-shop_ave hover:ring-1 hover:ring-shop_ave-yellow hover:text-gray-400;
+	}
+}
