@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
 /* body font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* bootstrap */
+@import url('bootstrap/dist/css/bootstrap.min.css');
 
 @tailwind base;
 @tailwind components;
@@ -9,12 +11,12 @@
 
 @layer components {
 	.link {
-		@apply cursor-pointer px-1 mx-6 uppercase font-heading text-gray-300;
+		@apply cursor-pointer px-1 mx-6 uppercase font-heading text-gray-300 hover:text-white;
 	}
 	.nav-icon {
-		@apply h-5 w-5 text-gray-300 mx-3;
+		@apply h-5 w-5 text-gray-300 mx-3 hover:text-white;
 	}
 	.button {
-		@apply py-2 px-10 mt-8 text-shop_ave text-xs md:text-sm rounded-sm focus:outline-none bg-shop_ave-yellow hover:bg-shop_ave hover:ring-1 hover:ring-shop_ave-yellow hover:text-gray-400;
+		@apply py-2 px-10 mt-8 text-shop_ave text-xs font-heading font-bold uppercase md:text-base rounded-sm focus:outline-none bg-shop_ave-yellow hover:bg-shop_ave hover:ring-1 hover:ring-shop_ave-yellow hover:text-gray-400;
 	}
 }
