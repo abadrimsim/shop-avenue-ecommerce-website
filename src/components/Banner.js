@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function Banner() {
 	return (
-		<div className=''>
+		<div>
 			<Carousel
 				autoPlay
 				infiniteLoop
@@ -14,12 +14,12 @@ function Banner() {
 				showThumbs={false}
 				interval={5000}
 			>
-				<div className='flex bg-shop_ave-darkGray gap-10'>
-					<div className='flex flex-col  justify-center flex-1 w-20 px-24 text-left items-start ml-20'>
+				<div className='flex bg-gray-800 gap-10 h-96'>
+					<div className='flex flex-col items-center justify-center flex-1 w-20 px-14 text-left md:px-24 md:items-start md:ml-20'>
 						<h1 className='uppercase text-2xl text-gray-200 font-heading'>
 							Great shopping deals here at Shop Avenue
 						</h1>
-						<p className='text-gray-400'>
+						<p className='text-gray-400 line-clamp-2'>
 							Get exclusive discounts at Shop Avenue. Lorem ipsum dolor, sit
 							amet consectetur adipisicing elit. Adipisci nisi iste repellat
 							officia blanditiis eum? Lorem ipsum dolor sit amet consectetur,
@@ -29,7 +29,7 @@ function Banner() {
 						<button className='button'>Shop Now</button>
 					</div>
 
-					<div className='flex-1 h-128 relative'>
+					<div className='hidden md:block flex-1 h-128 relative'>
 						<Image
 							loading='lazy'
 							src='https://i.ibb.co/wW80ZCQ/banner-img-3.png'
@@ -40,8 +40,8 @@ function Banner() {
 					</div>
 				</div>
 
-				<div className='flex bg-shop_ave-darkGray gap-10'>
-					<div className='flex-1 h-128 relative'>
+				<div className='flex bg-gray-800 gap-10 h-96'>
+					<div className='hidden md:block flex-1 h-128 relative'>
 						<Image
 							loading='lazy'
 							src='https://i.ibb.co/MCqnn6G/banner-img-1.png'
@@ -51,11 +51,11 @@ function Banner() {
 						/>
 					</div>
 
-					<div className='flex flex-col  justify-center flex-1 w-20 px-24 text-left items-start mr-20'>
+					<div className='flex flex-col items-center justify-center flex-1 w-20 px-14 text-left md:px-24 md:items-start md:mr-20'>
 						<h1 className='uppercase text-2xl text-gray-200 font-heading'>
 							Great shopping deals here at Shop Avenue
 						</h1>
-						<p className='text-gray-400'>
+						<p className='text-gray-400 line-clamp-2'>
 							Get exclusive discounts at Shop Avenue. Lorem ipsum dolor, sit
 							amet consectetur adipisicing elit. Adipisci nisi iste repellat
 							officia blanditiis eum? Lorem ipsum dolor sit amet consectetur
@@ -66,21 +66,21 @@ function Banner() {
 					</div>
 				</div>
 
-				<div className='flex bg-shop_ave-darkGray gap-10'>
-					<div className='flex flex-col  justify-center flex-1 w-20 px-24 text-left items-start ml-20'>
+				<div className='flex bg-gray-800 gap-10 h-96'>
+					<div className='flex flex-col items-center justify-center flex-1 w-20 px-14 text-left md:px-24 md:items-start md:ml-20'>
 						<h1 className='uppercase text-2xl text-gray-200 font-heading'>
 							Great shopping deals here at Shop Avenue
 						</h1>
-						<p className='text-gray-400'>
+						<p className='text-gray-400 line-clamp-2'>
 							Get exclusive discounts at Shop Avenue. Lorem ipsum dolor, sit
 							amet consectetur adipisicing elit. Adipisci nisi iste repellat
-							officia blanditiis eum?{' '}
+							officia blanditiis eum?
 						</p>
 
 						<button className='button'>View Products</button>
 					</div>
 
-					<div className='flex-1 h-128 relative'>
+					<div className='hidden md:block flex-1 h-128 relative'>
 						<Image
 							loading='lazy'
 							src='https://i.ibb.co/kmFj6kN/banner-img-2.png'

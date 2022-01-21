@@ -17,6 +17,9 @@
 		@apply h-5 w-5 text-gray-300 mx-3 hover:text-white;
 	}
 	.button {
-		@apply py-2 px-10 mt-8 text-shop_ave text-xs font-heading font-bold uppercase md:text-base rounded-sm focus:outline-none bg-shop_ave-yellow hover:bg-shop_ave hover:ring-1 hover:ring-shop_ave-yellow hover:text-gray-400;
+		@apply py-2 px-10 mt-8 text-shop_ave text-sm font-heading font-bold uppercase md:text-base rounded-sm focus:outline-none bg-shop_ave-yellow hover:bg-gray-800 hover:ring-1 hover:ring-shop_ave-yellow hover:text-gray-400;
+	}
+	.button-white {
+		@apply py-2 px-14 mt-8 text-shop_ave text-sm font-heading font-bold uppercase md:text-base rounded-sm focus:outline-none bg-shop_ave-yellow hover:bg-white hover:ring-1 hover:ring-shop_ave-yellow;
 	}
 }

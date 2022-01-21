@@ -11,8 +11,8 @@ module.exports = {
 				shop_ave: {
 					yellow: '#FFCC00',
 					gray: '#F0F0F0',
-					darkGray: '#212121',
-					dark: '#181818',
+					darkGray: '#212a30',
+					dark: '#192127',
 					DEFAULT: '#1C1C1C',
 				},
 			},
@@ -28,5 +28,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/line-clamp')],
 };

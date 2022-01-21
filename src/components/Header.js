@@ -9,8 +9,8 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 
 function Header() {
 	return (
-		<header className='p-0'>
-			<Navbar collapseOnSelect expand='lg' className='bg-shop_ave-dark pb-3'>
+		<header>
+			<Navbar collapseOnSelect expand='lg' className='bg-gray-900 p-3'>
 				<Container className='max-w-screen-2xl px-0'>
 					<Navbar.Brand
 						href='#home'
@@ -54,7 +54,12 @@ function Header() {
 							</Nav.Link>
 							<Nav.Link href='/'>
 								<p className='link md:hidden'>Shopping Cart</p>
-								<ShoppingBagIcon className='hidden md:block nav-icon' />
+								<div className='relative flex items-center'>
+									<span className='absolute -top-2 right-1 h-4 w-4 bg-yellow-400 text-center  rounded-full text-black font-bold text-xs'>
+										0
+									</span>
+									<ShoppingBagIcon className='hidden md:block nav-icon' />
+								</div>
 							</Nav.Link>
 							<Nav.Link href='/'>
 								<p className='link md:hidden'>Sign In</p>
