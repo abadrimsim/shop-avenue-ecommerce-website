@@ -17,10 +17,10 @@ function ProductItem({ product }) {
 	return (
 		<div>
 			<Header />
-			<div className='flex max-w-screen-2xl mx-auto my-32 gap-10 px-36'>
+
+			<main className='flex max-w-screen-2xl mx-auto my-32 gap-10 px-36'>
 				<div className='border-1 hover:border-shop_ave-yellow rounded relative cursor-crosshair'>
-					{/* <Image src={image} width={600} height={600} alt={title} /> */}
-					<Zoom img={image} zoomScale={3} width={600} height={600} />
+					<Zoom img={image} zoomScale={2} width={600} height={600} />
 				</div>
 				<div className=''>
 					<p className='text-gray-500 mb-3'>{category}</p>
@@ -51,33 +51,19 @@ function ProductItem({ product }) {
 					<hr className='mt-5 mb-4' />
 					<button className='button-white'>Add to Cart</button>
 				</div>
-			</div>
+			</main>
 		</div>
 	);
 }
 
 export default ProductItem;
 
-export async function getStaticPaths() {
-	const res = await fetch(`https://fakestoreapi.com/products`);
-	const products = await res.json();
-
-	const paths = products.map((product) => ({
-		params: { id: product.id.toString() },
-	}));
-
-	return {
-		paths,
-		fallback: false,
-	};
-}
-
-export async function getStaticProps(context) {
-	const id = context.params.id;
+export async function getServerSideProps(context) {
+	const { id } = context.params;
 	const res = await fetch(`https://fakestoreapi.com/products/${id}`);
-	const data = await res.json();
+	const product = await res.json();
 
 	return {
-		props: { product: data },
+		props: { product },
 	};
 }

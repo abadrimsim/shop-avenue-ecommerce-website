@@ -7,9 +7,11 @@ import {
 } from '@heroicons/react/outline';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { useSession, signIn, signOut } from 'next-auth/react';
+import { useRouter } from 'next/router';
 
 function Header() {
 	const { data: session } = useSession();
+	const router = useRouter();
 
 	return (
 		<header>
@@ -18,6 +20,7 @@ function Header() {
 					<Navbar.Brand
 						href='#home'
 						className='flex items-center content-center mr-14'
+						onClick={() => router.push('/')}
 					>
 						<Image
 							src={'/shop-logo-light.ico'}
@@ -55,7 +58,7 @@ function Header() {
 								<p className='link md:hidden'>Search</p>
 								<SearchIcon className='hidden md:block nav-icon' />
 							</Nav.Link>
-							<Nav.Link href='/'>
+							<Nav.Link onClick={() => router.push('/cart')}>
 								<p className='link md:hidden'>Shopping Cart</p>
 								<div className='relative flex items-center'>
 									<span className='absolute -top-2 right-1 h-4 w-4 bg-yellow-400 text-center  rounded-full text-black font-bold text-xs'>
