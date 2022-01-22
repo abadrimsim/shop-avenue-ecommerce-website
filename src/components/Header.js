@@ -6,8 +6,11 @@ import {
 	MenuIcon,
 } from '@heroicons/react/outline';
 import { Navbar, Container, Nav } from 'react-bootstrap';
+import { useSession, signIn, signOut } from 'next-auth/react';
 
 function Header() {
+	const { data: session } = useSession();
+
 	return (
 		<header>
 			<Navbar collapseOnSelect expand='lg' className='bg-gray-900 p-3'>
@@ -47,7 +50,7 @@ function Header() {
 								<p className='link'>Contact</p>
 							</Nav.Link>
 						</Nav>
-						<Nav className='ml-auto'>
+						<Nav className='ml-auto items-center'>
 							<Nav.Link href='/'>
 								<p className='link md:hidden'>Search</p>
 								<SearchIcon className='hidden md:block nav-icon' />
@@ -61,9 +64,22 @@ function Header() {
 									<ShoppingBagIcon className='hidden md:block nav-icon' />
 								</div>
 							</Nav.Link>
-							<Nav.Link href='/'>
-								<p className='link md:hidden'>Sign In</p>
-								<UserIcon className='hidden md:block nav-icon' />
+							<Nav.Link onClick={!session ? signIn : signOut}>
+								<p className='link md:hidden'>
+									{session ? `Logged in as ${session.user.name}` : 'Sign In'}
+								</p>
+								<div className='hidden md:block'>
+									{session ? (
+										<img
+											src={session.user.image}
+											width={30}
+											height={30}
+											className='rounded-2xl'
+										/>
+									) : (
+										<UserIcon className='nav-icon' />
+									)}
+								</div>
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
