@@ -54,7 +54,7 @@ function Banner() {
 					</div>
 
 					<div className='flex flex-col justify-center flex-1 text-left'>
-						<h1 className='text-5xl text-shop_ave font-sans tracking-wide mb-4'>
+						<h1 className='text-3xl md:text-5xl text-shop_ave font-sans tracking-wide mb-4'>
 							Feel good deals for all
 						</h1>
 						<h1 className='text-5xl text-shop_ave font-sans uppercase font-bold tracking-wide mb-5'>
@@ -72,7 +72,7 @@ function Banner() {
 
 				<div className='flex bg-white h-128 gap-12'>
 					<div className='flex flex-col justify-center flex-1 text-left'>
-						<h1 className='text-5xl text-shop_ave font-sans tracking-wide mb-4'>
+						<h1 className='text-3xl md:text-5xl text-shop_ave font-sans tracking-wide mb-4'>
 							Feel good deals for all
 						</h1>
 						<h1 className='text-5xl text-shop_ave font-sans uppercase font-bold tracking-wide mb-5'>
