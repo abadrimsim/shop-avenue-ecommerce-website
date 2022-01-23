@@ -17,8 +17,8 @@ function Product({ id, title, price, description, category, image, rating }) {
 
 	return (
 		<Link href={`/products/${id}`} key={id} passHref>
-			<div className=' flex flex-col m-4 bg-white z-30 p-8 cursor-pointer'>
-				<div className='border-1 mx-auto p-4 hover:border-shop_ave-yellow rounded relative'>
+			<div className='flex flex-col z-30 p-4 my-2 mb:my-5 cursor-pointer'>
+				<div className='border-1 mx-auto hover:border-shop_ave-yellow rounded relative'>
 					<Image
 						src={image}
 						height={400}
@@ -28,48 +28,52 @@ function Product({ id, title, price, description, category, image, rating }) {
 					/>
 
 					{isOnSale && (
-						<p className='absolute top-4 right-4 text-xs text-shop_ave font-bold bg-shop_ave-yellow p-2'>
+						<p className='absolute top-2 right-2 text-xs text-white font-sans tracking-widest font-semibold bg-shop_ave p-2'>
 							-30%
 						</p>
 					)}
 				</div>
 
-				<h4 className='mb-2 mt-3 font-semibold text-base text-shop_ave text-center'>
-					{title}
-				</h4>
-				<div className='flex mb-2 justify-center'>
-					<NumberFormat
-						value={price}
-						displayType={'text'}
-						thousandSeparator={true}
-						prefix={'$'}
-						className='font-semibold mr-2'
-					/>
+				<div>
+					<h4 className=' mt-3 font-semibold font-sans tracking-wider text-base text-shop_ave'>
+						{title}
+					</h4>
+					<p className='font-sans text-gray-500 tracking-wider'>{category}</p>
 
-					{isOnSale ? (
+					<div className='flex'>
+						{Array(rate)
+							.fill()
+							.map((_, i) => (
+								<StarIcon key={i} className='h-4 text-shop_ave-yellow' />
+							))}
+						{Array(ratingFiller)
+							.fill()
+							.map((_, i) => (
+								<StarIcon key={i} className='h-4 text-gray-300' />
+							))}
+					</div>
+
+					<div className='flex mt-4 mb-2 font-sans text-lg tracking-wider'>
 						<NumberFormat
-							value={discountCalc.toFixed(2)}
+							value={price}
 							displayType={'text'}
 							thousandSeparator={true}
 							prefix={'$'}
-							className='line-through text-gray-400'
+							className='font-semibold text-shop_ave mr-2'
 						/>
-					) : (
-						''
-					)}
-				</div>
 
-				<div className='flex justify-center'>
-					{Array(rate)
-						.fill()
-						.map((_, i) => (
-							<StarIcon key={i} className='h-5 text-shop_ave-yellow' />
-						))}
-					{Array(ratingFiller)
-						.fill()
-						.map((_, i) => (
-							<StarIcon key={i} className='h-5 text-gray-300' />
-						))}
+						{isOnSale ? (
+							<NumberFormat
+								value={discountCalc.toFixed(2)}
+								displayType={'text'}
+								thousandSeparator={true}
+								prefix={'$'}
+								className='line-through text-gray-400'
+							/>
+						) : (
+							''
+						)}
+					</div>
 				</div>
 			</div>
 		</Link>

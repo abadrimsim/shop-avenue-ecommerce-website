@@ -1,5 +1,6 @@
 /* header font */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;600;700&display=swap');
 /* body font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 /* bootstrap */
@@ -14,10 +15,10 @@
 		@apply cursor-pointer px-1 mx-6 uppercase font-heading text-gray-300 hover:text-white;
 	}
 	.nav-icon {
-		@apply h-5 w-5 text-gray-300 mx-3 hover:text-white;
+		@apply h-5 w-5 text-shop_ave mx-1;
 	}
 	.button {
-		@apply py-2 px-10 mt-8 text-shop_ave text-sm font-heading font-bold uppercase md:text-base rounded-sm focus:outline-none bg-shop_ave-yellow hover:bg-gray-800 hover:ring-1 hover:ring-shop_ave-yellow hover:text-gray-400;
+		@apply py-2 mt-8 ml-1 w-2/4 md:w-1/5 text-white text-sm font-sans tracking-widest font-semibold md:text-base rounded-sm focus:outline-none bg-shop_ave hover:bg-white hover:ring-1 hover:ring-shop_ave hover:text-shop_ave;
 	}
 	.button-white {
 		@apply py-2 px-14 mt-8 text-shop_ave text-sm font-heading font-bold uppercase md:text-base rounded-sm focus:outline-none bg-shop_ave-yellow hover:bg-white hover:ring-1 hover:ring-shop_ave-yellow;

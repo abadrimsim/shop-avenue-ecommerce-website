@@ -13,12 +13,13 @@ module.exports = {
 					gray: '#F0F0F0',
 					darkGray: '#212a30',
 					dark: '#192127',
-					DEFAULT: '#1C1C1C',
+					brown: '#c59f81',
+					DEFAULT: '#333333',
 				},
 			},
 			fontFamily: {
-				sans: ['Lato', 'sans-serif'],
-				heading: ['Rajdhani', 'sans-serif'],
+				sans: ['Encode Sans Condensed', 'sans-serif'],
+				heading: ['Encode Sans Condensed', 'sans-serif'],
 			},
 			screens: {
 				md: '960px',
