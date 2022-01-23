@@ -57,7 +57,7 @@ function Banner() {
 						<h1 className='text-3xl md:text-5xl text-shop_ave font-sans tracking-wide mb-4'>
 							Feel good deals for all
 						</h1>
-						<h1 className='text-5xl text-shop_ave font-sans uppercase font-bold tracking-wide mb-5'>
+						<h1 className='text-3xl md:text-5xl text-shop_ave font-sans uppercase font-bold tracking-wide mb-5'>
 							Up to 50% off
 						</h1>
 						<p className='text-gray-500 font-sans tracking-wider line-clamp-2 '>
@@ -75,7 +75,7 @@ function Banner() {
 						<h1 className='text-3xl md:text-5xl text-shop_ave font-sans tracking-wide mb-4'>
 							Feel good deals for all
 						</h1>
-						<h1 className='text-5xl text-shop_ave font-sans uppercase font-bold tracking-wide mb-5'>
+						<h1 className='text-3xl md:text-5xl text-shop_ave font-sans uppercase font-bold tracking-wide mb-5'>
 							Up to 50% off
 						</h1>
 						<p className='text-gray-500 font-sans tracking-wider line-clamp-2 '>
