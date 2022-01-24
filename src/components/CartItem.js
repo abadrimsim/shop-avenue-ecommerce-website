@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
 
 function CartItem({ id, title, price, rating, description, category, image }) {
+	console.log(id, title, price, rating, description, category, image);
 	const dispatch = useDispatch();
 
 	const addItemToCart = () => {
@@ -51,28 +52,17 @@ function CartItem({ id, title, price, rating, description, category, image }) {
 			</div>
 
 			{/* Right add/remove buttons */}
-			<div className='flex justify-self-end items-center'>
-				<button
-					className='button px-3 py-1 my-auto text-sm text-center'
-					onClick={removeItemFromCart}
-				>
-					-
+			<div className='flex flex-col justify-self-end items-center'>
+				<button className='button w-full m-2' onClick={addItemToCart}>
+					Add to Cart
 				</button>
-				<input
-					type='text'
-					className='border-1 border-shop_ave h-7 w-8 mx-0.5'
-				/>
-				<button
-					className='button px-3 py-1 my-auto text-sm text-center ml-0'
-					onClick={addItemToCart}
-				>
-					+
+
+				<button className='button w-full m-2' onClick={removeItemFromCart}>
+					Remove from Cart
 				</button>
 			</div>
 		</div>
 	);
 }
-
-// py-2 mt-8 ml-1 w-2/4 md:w-1/5 text-white text-sm font-sans tracking-widest font-semibold md:text-base rounded-sm focus:outline-none bg-shop_ave hover:bg-white hover:ring-1 hover:ring-shop_ave hover:text-shop_ave
 
 export default CartItem;

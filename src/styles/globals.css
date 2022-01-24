@@ -18,7 +18,10 @@
 		@apply h-5 w-5 text-shop_ave mx-1;
 	}
 	.button {
-		@apply py-2 mt-8 ml-1 w-2/4 md:w-1/5 text-white text-sm font-sans tracking-widest font-semibold md:text-base rounded-sm focus:outline-none bg-shop_ave hover:bg-white hover:ring-1 hover:ring-shop_ave hover:text-shop_ave;
+		@apply py-2 mt-8 ml-1 w-2/4 md:w-1/5 text-white text-sm font-sans tracking-wider md:text-base rounded-sm focus:outline-none bg-shop_ave hover:bg-white hover:ring-1 hover:ring-shop_ave hover:text-shop_ave;
+	}
+	.button-disabled {
+		@apply py-2 mt-8 ml-1 w-2/4 md:w-1/5 text-gray-300 text-sm font-sans tracking-wider md:text-base rounded-sm focus:outline-none bg-white hover:bg-white hover:ring-1 hover:ring-gray-300 ring-gray-300 hover:text-gray-300;
 	}
 	.button-white {
 		@apply py-2 px-14 mt-8 text-shop_ave text-sm font-heading font-bold uppercase md:text-base rounded-sm focus:outline-none bg-shop_ave-yellow hover:bg-white hover:ring-1 hover:ring-shop_ave-yellow;
