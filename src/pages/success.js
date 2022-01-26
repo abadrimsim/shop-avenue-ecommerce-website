@@ -11,13 +11,13 @@ function Success() {
 
 			<main className='max-w-screen-lg mx-auto'>
 				<div className='flex flex-col p-10 text-center items-center'>
-					<div className='flex items-center space-x-2 mb-5'>
+					<div className='flex flex-col md:flex-row items-center space-x-2 mb-5'>
 						<CheckCircleIcon className='text-green-500 h-10' />
-						<h1 className='text-3xl text-green-500'>
+						<h1 className='text-2xl md:text-3xl text-green-500'>
 							Thank you for your purchase!
 						</h1>
 					</div>
-					<p>
+					<p className='text-sm md:text-base'>
 						Thank you for shopping with us. We{"'"}ll send a confirmation once
 						your item has been shipped. If you would like to check the status of
 						your order(s) please check the link below.

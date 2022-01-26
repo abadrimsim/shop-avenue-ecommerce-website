@@ -41,11 +41,29 @@ function ProductItem({ singleProduct, allProducts }) {
 		<div>
 			<Header />
 			<main className='max-w-screen-2xl mx-auto'>
-				<div className='flex flex-col md:flex-row my-32 gap-10 font-sans tracking-wider leading-7 p-4'>
-					<div className='border-1 mx-auto hover:border-shop_ave-yellow rounded cursor-crosshair w-2/4 relative'>
-						<Image src={image} layout='fill' alt={title} objectFit='contain' />
+				<div className='flex flex-col md:flex-row md:my-32 gap-10 font-sans tracking-wider leading-7 p-4'>
+					<div className='flex justify-center border-1 mx-auto hover:border-shop_ave-yellow rounded cursor-crosshair w-full md:w-auto '>
+						<div className='md:hidden'>
+							<Image
+								src={image}
+								width={500}
+								height={500}
+								alt={title}
+								objectFit='contain'
+							/>
+						</div>
+						<div className='hidden md:block'>
+							<Zoom
+								img={image}
+								key={id}
+								zoomScale={3}
+								width={600}
+								height={600}
+								transitionTime={0.5}
+							/>
+						</div>
 					</div>
-					<div className='w-2/4'>
+					<div className='w-full md:w-2/4'>
 						<p className='text-gray-500 mb-3'>{category}</p>
 						<h3 className='text-3xl font-semibold mb-2'>{title}</h3>
 						<span className='flex gap-2 font-semibold'>
@@ -77,15 +95,17 @@ function ProductItem({ singleProduct, allProducts }) {
 							/>
 						</div>
 
-						<hr className='mb-5 text-gray-400' />
-						<button onClick={addItemToCart} className='button mr-5'>
-							Add to Cart
-						</button>
-						<Link href={'/cart'} passHref>
-							<button onClick={addItemToCart} className='button'>
-								Buy Now
+						<hr className='text-gray-400' />
+						<div className='flex flex-row md:mt-5'>
+							<button onClick={addItemToCart} className='button mr-5'>
+								Add to Cart
 							</button>
-						</Link>
+							<Link href={'/cart'} passHref>
+								<button onClick={addItemToCart} className='button'>
+									Buy Now
+								</button>
+							</Link>
+						</div>
 					</div>
 				</div>
 

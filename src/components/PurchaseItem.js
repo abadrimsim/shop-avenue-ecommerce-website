@@ -16,11 +16,11 @@ function PurchaseItem({
 	return (
 		<div className='relative border rounded-md'>
 			<div className='flex items-center space-x-10 px-3 py-2 border-b text-sm text-gray-600 font-sans tracking-wider'>
-				<h2 className='grow text-lg font-semibold text-shop_ave'>
-					<TruckIcon className='h-6 pb-1 mr-2 inline' /> Shipping {items.length}{' '}
-					item/s
+				<h2 className='grow text-sm md:text-lg font-semibold text-shop_ave'>
+					<TruckIcon className='h-6 pb-1 mr-2 hidden md:inline' /> Shipping{' '}
+					{items.length} item/s
 				</h2>
-				<div className='grow'>
+				<div className='grow hidden md:flex'>
 					<p className='font-semibold text-sm text-shop_ave'>
 						Order placed on:
 					</p>
@@ -29,7 +29,7 @@ function PurchaseItem({
 					</p>
 				</div>
 
-				<div className='grow'>
+				<div className='grow hidden md:flex'>
 					<p className='font-semibold text-sm text-shop_ave'>Total:</p>
 					<p className='font-semibold text-sm text-gray-400'>
 						<NumberFormat
@@ -42,7 +42,7 @@ function PurchaseItem({
 				</div>
 
 				<div className='relative justify-self-end text-right'>
-					<p className='font-semibold text-sm text-shop_ave'>ORDER# {str}</p>
+					<p className='font-semibold text-sm text-shop_ave'>Order# {str}</p>
 				</div>
 			</div>
 

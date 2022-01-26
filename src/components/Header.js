@@ -11,11 +11,30 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import { selectItems } from '../slices/cartSlice';
+import { useState } from 'react';
+
+import { useDispatch } from 'react-redux';
+import searchQuery from '../slices/searchSlice';
 
 function Header() {
 	const { data: session } = useSession();
 	const router = useRouter();
 	const items = useSelector(selectItems);
+	const [searchInput, setSearchInput] = useState('');
+
+	const dispatch = useDispatch();
+
+	const onChange = (e) => {
+		e.preventDefault();
+		setSearchInput(e.target.value);
+	};
+
+	const searchItem = () => {
+		const inputValue = searchInput;
+		console.log(inputValue);
+		dispatch(searchQuery(inputValue));
+		// router.push('/search');
+	};
 
 	return (
 		<header className='z-10 mb-2'>
@@ -48,8 +67,12 @@ function Header() {
 									placeholder='Search'
 									className='items-center w-full rounded-3xl focus:ring-0 my-1 font-sans'
 									aria-label='Search'
+									onChange={onChange}
 								/>
-								<SearchIcon className='h-6 mx-1 mt-2.5 cursor-pointer text-shop_ave' />
+								<SearchIcon
+									onClick={searchItem}
+									className='h-6 mx-1 mt-2.5 cursor-pointer text-shop_ave'
+								/>
 							</Form>
 							<Nav.Link onClick={() => router.push('/cart')}>
 								<p className='font-sans text-gray-500 font-semibold tracking-wide md:hidden text-left hover:text-shop_ave'>
@@ -69,11 +92,12 @@ function Header() {
 								</p>
 								<div className='hidden md:block'>
 									{session ? (
-										<img
+										<Image
 											src={session.user.image}
 											width={30}
 											height={30}
 											className='rounded-2xl'
+											alt={session.user.name}
 										/>
 									) : (
 										<span className='flex font-sans text-gray-500 font-semibold tracking-wide border-l border-l-gray-400 hover:text-shop_ave'>

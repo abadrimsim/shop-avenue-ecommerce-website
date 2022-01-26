@@ -28,7 +28,7 @@ function CartItem({ id, title, price, rating, description, category, image }) {
 	};
 
 	return (
-		<div className='grid grid-cols-5 font-sans tracking-wider'>
+		<div className='grid grid-cols-1 md:grid-cols-5 font-sans tracking-wider'>
 			<Image
 				src={image}
 				height={100}
@@ -38,7 +38,7 @@ function CartItem({ id, title, price, rating, description, category, image }) {
 			/>
 
 			{/* Middle */}
-			<div className='col-span-3 mx-5'>
+			<div className='col-span-3 mx-4'>
 				<p className='font-semibold'>{title}</p>
 				<p className='text-gray-400'>{category}</p>
 
@@ -52,7 +52,7 @@ function CartItem({ id, title, price, rating, description, category, image }) {
 			</div>
 
 			{/* Right add/remove buttons */}
-			<div className='flex flex-col justify-self-end items-center'>
+			<div className='flex flex-col w-full justify-self-end items-center'>
 				<button className='button w-full m-2' onClick={addItemToCart}>
 					Add to Cart
 				</button>
