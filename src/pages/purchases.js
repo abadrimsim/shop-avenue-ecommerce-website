@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import PurchaseItem from '../components/PurchaseItem';
 import { useSession, getSession } from 'next-auth/react';
 
-function purchases({ orders }) {
+function Purchases({ orders }) {
 	const { data: session } = useSession();
 
 	return (
@@ -38,7 +38,7 @@ function purchases({ orders }) {
 	);
 }
 
-export default purchases;
+export default Purchases;
 
 export async function getServerSideProps(context) {
 	const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
