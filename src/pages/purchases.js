@@ -4,9 +4,8 @@ import Header from '../components/Header';
 import PurchaseItem from '../components/PurchaseItem';
 import { useSession, getSession } from 'next-auth/react';
 
-function purchases({ orders, session }) {
-	console.log(session);
-	// const { data: session } = useSession();
+function purchases({ orders }) {
+	const { data: session } = useSession();
 
 	return (
 		<div>
@@ -81,7 +80,6 @@ export async function getServerSideProps(context) {
 	return {
 		props: {
 			orders,
-			session,
 		},
 	};
 }

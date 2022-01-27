@@ -36,10 +36,10 @@ function Cart() {
 		<div>
 			<Header />
 
-			<main className='flex flex-col md:flex-row max-w-screen-2xl mx-auto'>
+			<main className='flex flex-col gap-5 md:flex-row max-w-screen-2xl mx-auto'>
 				{/* Left */}
 				<div className='flex-grow'>
-					<div className='flex flex-col p-5 space-y-10'>
+					<div className='flex flex-col p-4 space-y-10'>
 						<h1 className='text-2xl border-b pb-4 font-sans tracking-wider font-semibold'>
 							{items.length === 0
 								? 'Your cart is empty.'
@@ -62,10 +62,12 @@ function Cart() {
 				</div>
 
 				{/* Right */}
-				<div className='flex flex-col bg-white p-12 font-sans tracking-wider relative'>
+				<div className='flex flex-col bg-white p-4 font-sans tracking-wider relative'>
 					{items.length > 0 && (
 						<>
-							<h3 className='font-semibold border-b pb-4'>Order Summary</h3>
+							<h3 className='font-semibold border-b pb-4 text-xl'>
+								Order Summary
+							</h3>
 							<h2 className='whitespace-nowrap mt-4'>
 								Subtotal ({items.length} items):{' '}
 								<span className='font-bold'>
@@ -81,11 +83,12 @@ function Cart() {
 								role='link'
 								onClick={createCheckoutSession}
 								disabled={!session}
-								className={`button w-full mb-4 ml-0 ${
-									!session && 'button-disabled cursor-not-allowed'
+								className={`button w-full my-5 ml-0 ${
+									!session &&
+									'bg-gray-200 text-gray-500 hover:ring-0 hover:bg-gray-200 hover:text-gray-500 cursor-not-allowed'
 								}`}
 							>
-								Proceed to checkout
+								Proceed to Checkout
 							</button>
 
 							<Image

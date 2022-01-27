@@ -42,7 +42,7 @@ function ProductItem({ singleProduct, allProducts }) {
 			<Header />
 			<main className='max-w-screen-2xl mx-auto'>
 				<div className='flex flex-col md:flex-row md:my-32 gap-10 font-sans tracking-wider leading-7 p-4'>
-					<div className='flex justify-center border-1 mx-auto hover:border-shop_ave-yellow rounded cursor-crosshair w-full md:w-auto '>
+					<div className='flex justify-center border-1 mx-auto hover:border-shop_ave-yellow duration-300 rounded cursor-crosshair w-full md:w-auto '>
 						<div className='md:hidden'>
 							<Image
 								src={image}

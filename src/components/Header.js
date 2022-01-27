@@ -2,6 +2,7 @@ import Image from 'next/image';
 import {
 	SearchIcon,
 	ShoppingBagIcon,
+	ShoppingCartIcon,
 	UserIcon,
 	MenuIcon,
 	ChevronDownIcon,
@@ -61,11 +62,11 @@ function Header() {
 					</Navbar.Toggle>
 					<Navbar.Collapse id='responsive-navbar-nav ' className='justify-end'>
 						<Nav className='mx-3'>
-							<Form className='d-flex'>
+							<Form className='d-flex mt-2'>
 								<FormControl
 									type='search'
 									placeholder='Search'
-									className='items-center w-full rounded-3xl focus:ring-0 my-1 font-sans'
+									className='items-center w-full rounded-3xl focus:ring-0 my-1 px-3 h-9 font-sans mr-2'
 									aria-label='Search'
 									onChange={onChange}
 								/>
@@ -74,23 +75,37 @@ function Header() {
 									className='h-6 mx-1 mt-2.5 cursor-pointer text-shop_ave'
 								/>
 							</Form>
+
 							<Nav.Link onClick={() => router.push('/cart')}>
 								<p className='font-sans text-gray-500 font-semibold tracking-wide md:hidden text-left hover:text-shop_ave'>
 									Shopping Cart
 								</p>
-								<div className='relative hidden md:flex items-center font-sans text-gray-500 font-semibold tracking-wide border-l border-l-gray-400 hover:text-shop_ave'>
+								<div className='relative mt-2 hidden md:flex items-center font-sans text-gray-500 font-semibold tracking-wide border-l border-l-gray-400 hover:text-shop_ave'>
 									<span className='absolute -top-1 left-3 h-4 w-4 bg-yellow-400 text-center  rounded-full text-black font-bold text-xs'>
 										{items.length}
 									</span>
-									<ShoppingBagIcon className='hidden md:block nav-icon' />
+									<ShoppingCartIcon className='hidden md:block nav-icon' />
 									<p>Shopping Cart</p>
 								</div>
 							</Nav.Link>
+
+							{session && (
+								<Nav.Link onClick={() => router.push('/purchases')}>
+									<p className='font-sans text-gray-500 font-semibold tracking-wide md:hidden text-left hover:text-shop_ave'>
+										My Purchases
+									</p>
+									<div className='relative mt-2 hidden md:flex items-center font-sans text-gray-500 font-semibold tracking-wide border-l border-l-gray-400 hover:text-shop_ave'>
+										<ShoppingBagIcon className='hidden md:block nav-icon' />
+										<p>My Purchases</p>
+									</div>
+								</Nav.Link>
+							)}
+
 							<Nav.Link onClick={!session ? signIn : signOut}>
 								<p className='font-sans text-gray-500 font-semibold tracking-wide md:hidden text-left hover:text-shop_ave'>
 									{session ? `Logged in as ${session.user.name}` : 'Sign In'}
 								</p>
-								<div className='hidden md:block'>
+								<div className='hidden mt-2 md:block'>
 									{session ? (
 										<Image
 											src={session.user.image}

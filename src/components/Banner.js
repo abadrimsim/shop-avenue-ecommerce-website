@@ -22,7 +22,7 @@ function Banner() {
 						<h1 className='text-3xl md:text-5xl text-shop_ave font-sans uppercase font-bold tracking-wide mb-5'>
 							Up to 50% off
 						</h1>
-						<p className='text-gray-500 font-sans tracking-wider line-clamp-2 '>
+						<p className='text-gray-500 font-sans tracking-wider line-clamp-2 mb-4'>
 							Get exclusive discounts at Shop Avenue. Lorem ipsum dolor, sit
 							amet consectetur adipisicing elit. Adipisci nisi iste repellat
 							officia blanditiis eum!
@@ -60,7 +60,7 @@ function Banner() {
 						<h1 className='text-3xl md:text-5xl text-shop_ave font-sans uppercase font-bold tracking-wide mb-5'>
 							Up to 50% off
 						</h1>
-						<p className='text-gray-500 font-sans tracking-wider line-clamp-2 '>
+						<p className='text-gray-500 font-sans tracking-wider line-clamp-2 mb-4'>
 							Get exclusive discounts at Shop Avenue. Lorem ipsum dolor, sit
 							amet consectetur adipisicing elit. Adipisci nisi iste repellat
 							officia blanditiis eum!
@@ -78,7 +78,7 @@ function Banner() {
 						<h1 className='text-3xl md:text-5xl text-shop_ave font-sans uppercase font-bold tracking-wide mb-5'>
 							Up to 50% off
 						</h1>
-						<p className='text-gray-500 font-sans tracking-wider line-clamp-2 '>
+						<p className='text-gray-500 font-sans tracking-wider line-clamp-2 mb-4'>
 							Get exclusive discounts at Shop Avenue. Lorem ipsum dolor, sit
 							amet consectetur adipisicing elit. Adipisci nisi iste repellat
 							officia blanditiis eum!

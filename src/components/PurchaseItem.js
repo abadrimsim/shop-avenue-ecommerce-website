@@ -21,7 +21,7 @@ function PurchaseItem({
 					{items.length} item/s
 				</h2>
 				<div className='grow hidden md:flex'>
-					<p className='font-semibold text-sm text-shop_ave'>
+					<p className='font-semibold text-sm text-shop_ave mr-1'>
 						Order placed on:
 					</p>
 					<p className='font-semibold text-sm text-gray-400'>
@@ -30,7 +30,7 @@ function PurchaseItem({
 				</div>
 
 				<div className='grow hidden md:flex'>
-					<p className='font-semibold text-sm text-shop_ave'>Total:</p>
+					<p className='font-semibold text-sm text-shop_ave mr-1'>Total: </p>
 					<p className='font-semibold text-sm text-gray-400'>
 						<NumberFormat
 							value={amount}

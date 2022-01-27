@@ -18,7 +18,7 @@ function Product({ id, title, price, description, category, image, rating }) {
 	return (
 		<Link href={`/products/${id}`} key={id} passHref>
 			<div className='flex flex-col z-30 p-4 my-2 mb:my-5 cursor-pointer'>
-				<div className='border-1 mx-auto hover:border-shop_ave-yellow rounded relative'>
+				<div className='border-1 mx-auto hover:border-shop_ave-yellow duration-200 rounded relative'>
 					<Image
 						src={image}
 						height={400}
