@@ -20,12 +20,15 @@ function PageNotFound() {
 				/>
 				<div>
 					<h1 className='text-3xl font-bold mb-3'>Oops! Nothing here...</h1>
-					<p>
+					<p className='mb-4'>
 						Sorry but the page you are looking for does not exist or is
 						temporarily unavailable.
 					</p>
-					<button onClick={() => router.push('/')} className='button w-44'>
-						Go Back to Homepage
+					<button
+						onClick={() => router.push('/')}
+						className='button w-1/3 ml-0'
+					>
+						Back to Homepage
 					</button>
 				</div>
 			</main>
