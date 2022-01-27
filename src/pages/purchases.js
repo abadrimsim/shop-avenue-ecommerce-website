@@ -3,6 +3,7 @@ import db from '../../firebase';
 import Header from '../components/Header';
 import PurchaseItem from '../components/PurchaseItem';
 import { useSession, getSession } from 'next-auth/react';
+import Footer from '../components/Footer';
 
 function Purchases({ orders }) {
 	const { data: session } = useSession();
@@ -34,6 +35,8 @@ function Purchases({ orders }) {
 					)}
 				</div>
 			</main>
+
+			<Footer />
 		</div>
 	);
 }
