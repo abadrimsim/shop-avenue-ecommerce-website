@@ -1,8 +1,6 @@
 /* header font */
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;600;700&display=swap');
-/* body font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 /* bootstrap */
 @import url('bootstrap/dist/css/bootstrap.min.css');
 
@@ -12,7 +10,7 @@
 
 @layer components {
 	.link {
-		@apply cursor-pointer px-1 mx-6 uppercase font-heading text-gray-300 hover:text-white;
+		@apply cursor-pointer px-1 mx-6 uppercase font-sans text-gray-300 hover:text-white;
 	}
 	.nav-icon {
 		@apply h-5 w-5 text-shop_ave mx-1;

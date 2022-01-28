@@ -28,19 +28,19 @@ function CartItem({ id, title, price, rating, description, category, image }) {
 	};
 
 	return (
-		<div className='grid grid-cols-1 md:grid-cols-5 font-sans tracking-wider'>
+		<div className='grid grid-cols-1 md:grid-cols-5 font-sans tracking-wider bg-gray-100 p-5 rounded-md'>
 			<Image
 				src={image}
-				height={100}
-				width={100}
+				height={150}
+				width={150}
 				alt={title}
 				objectFit='contain'
 			/>
 
 			{/* Middle */}
 			<div className='col-span-3 mx-4'>
-				<p className='font-semibold'>{title}</p>
-				<p className='text-gray-400'>{category}</p>
+				<p className='font-semibold mb-3'>{title}</p>
+				<p className='text-gray-500 mb-4'>{description}</p>
 
 				<NumberFormat
 					value={price}

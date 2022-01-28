@@ -66,7 +66,7 @@ function Cart() {
 					{items.length > 0 && (
 						<>
 							<h3 className='font-semibold border-b pb-4 text-xl'>
-								Order Summary
+								Order Summary:
 							</h3>
 							<h2 className='whitespace-nowrap mt-4'>
 								Subtotal ({items.length} items):{' '}

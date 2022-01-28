@@ -70,21 +70,13 @@ function ProductItem({ singleProduct, allProducts }) {
 							<p className='text-gray-400'>Availability:</p>
 							<p>In Stock</p>
 						</span>
-						<div className='flex justify-start mb-10'>
-							{Array(rate)
-								.fill()
-								.map((_, i) => (
-									<StarIcon key={i} className='h-5 text-shop_ave-yellow' />
-								))}
-							{Array(ratingFiller)
-								.fill()
-								.map((_, i) => (
-									<StarIcon key={i} className='h-5 text-gray-300' />
-								))}
-						</div>
+
+						<hr className='text-gray-400 my-3' />
+
 						<p className='mb-3'>{description}</p>
-						<hr className='text-gray-400' />
-						<div className='my-5 justify-start font-semibold'>
+
+						<hr className='text-gray-400 my-3' />
+						<div className='justify-start font-semibold mb-16'>
 							<p className='text-gray-400'>Price:</p>
 							<NumberFormat
 								value={price}
@@ -95,9 +87,8 @@ function ProductItem({ singleProduct, allProducts }) {
 							/>
 						</div>
 
-						<hr className='text-gray-400' />
 						<div className='flex flex-row md:mt-5'>
-							<button onClick={addItemToCart} className='button mr-5'>
+							<button onClick={addItemToCart} className='button ml-0 mr-5'>
 								Add to Cart
 							</button>
 							<Link href={'/cart'} passHref>

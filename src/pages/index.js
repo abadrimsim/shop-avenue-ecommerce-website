@@ -11,7 +11,7 @@ export default function Home({ data }) {
 		<div className='bg-white text-gray-600'>
 			<Head>
 				<title>Welcome to Shop Avenue</title>
-				<link rel='shortcut icon' href='/shop-logo-light.ico' />
+				<link rel='shortcut icon' href='/shopave-logo-round.ico' />
 			</Head>
 
 			<Header />
