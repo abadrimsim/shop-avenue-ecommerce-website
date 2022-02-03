@@ -1,6 +1,10 @@
 /* header font */
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap');
+
 /* bootstrap */
 @import url('bootstrap/dist/css/bootstrap.min.css');
 
@@ -16,7 +20,7 @@
 		@apply h-5 w-5 text-shop_ave mx-1;
 	}
 	.button {
-		@apply py-2 mx-1 w-2/4 md:w-1/5 text-white text-sm font-sans tracking-wider md:text-base rounded-sm focus:outline-none bg-shop_ave duration-200 hover:bg-white hover:ring-1 hover:ring-shop_ave hover:text-shop_ave;
+		@apply py-2 mx-1 w-2/4 md:w-full text-white text-xs font-sans uppercase tracking-wider md:text-base rounded-sm focus:outline-none bg-shop_ave duration-200 hover:bg-white hover:ring-1 hover:ring-shop_ave hover:text-shop_ave;
 	}
 	.button-disabled {
 		@apply py-2 mt-8 ml-1 w-2/4 md:w-1/5 text-gray-300 text-sm font-sans tracking-wider md:text-base rounded-sm focus:outline-none bg-white hover:bg-white hover:ring-1 hover:ring-gray-300 ring-gray-300 hover:text-gray-300;

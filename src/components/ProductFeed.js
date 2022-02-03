@@ -4,7 +4,7 @@ import Image from 'next/image';
 function ProductFeed({ products }) {
 	return (
 		<>
-			<h2 className='font-sans font-semibold text-2xl text-shop_ave mt-20 tracking-wider'>
+			<h2 className='font-heading text-2xl text-shop_ave my-16 tracking-wide text-center'>
 				Featured Products
 			</h2>
 			<div className='grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
@@ -29,7 +29,7 @@ function ProductFeed({ products }) {
 					alt='Advertisement Banner'
 				/>
 
-				<h2 className='font-sans font-semibold text-2xl text-shop_ave mt-20 tracking-wider md:col-span-full'>
+				<h2 className='font-heading text-2xl text-shop_ave text-center my-20 tracking-wide md:col-span-full'>
 					More Products
 				</h2>
 

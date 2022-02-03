@@ -18,7 +18,7 @@ function Product({ id, title, price, description, category, image, rating }) {
 	return (
 		<Link href={`/products/${id}`} key={id} passHref>
 			<div className='flex flex-col z-30 p-4 my-2 mb:my-5 cursor-pointer'>
-				<div className='border-1 mx-auto hover:border-shop_ave-yellow duration-200 rounded relative'>
+				<div className='mx-auto duration-200 rounded relative'>
 					<Image
 						src={image}
 						height={400}
@@ -28,38 +28,40 @@ function Product({ id, title, price, description, category, image, rating }) {
 					/>
 
 					{isOnSale && (
-						<p className='absolute top-2 right-2 text-xs text-white font-sans tracking-widest font-semibold bg-shop_ave p-2'>
+						<p className='absolute top-1 right-1 text-xs text-white font-sans tracking-wider bg-shop_ave p-2'>
 							-30%
 						</p>
 					)}
 				</div>
 
 				<div>
-					<h4 className=' mt-3 font-semibold font-sans tracking-wider text-base text-shop_ave'>
+					<h4 className=' mt-5 font-sans uppercase tracking-wider text-sm text-shop_ave-black'>
 						{title}
 					</h4>
-					<p className='font-sans text-gray-500 tracking-wider'>{category}</p>
+					<p className='font-sans text-gray-400 uppercase text-xs tracking-wider'>
+						{category}
+					</p>
 
-					<div className='flex'>
+					{/* <div className='flex'>
 						{Array(rate)
 							.fill()
 							.map((_, i) => (
-								<StarIcon key={i} className='h-4 text-shop_ave-yellow' />
+								<StarIcon key={i} className='h-4 text-shop_ave-tan' />
 							))}
 						{Array(ratingFiller)
 							.fill()
 							.map((_, i) => (
 								<StarIcon key={i} className='h-4 text-gray-300' />
 							))}
-					</div>
+					</div> */}
 
-					<div className='flex mt-4 mb-2 font-sans text-lg tracking-wider'>
+					<div className='flex mt-3 mb-2 font-sans tracking-wider text-sm'>
 						<NumberFormat
 							value={price}
 							displayType={'text'}
 							thousandSeparator={true}
 							prefix={'$'}
-							className='font-semibold text-shop_ave mr-2'
+							className='text-shop_ave mr-2'
 						/>
 
 						{isOnSale ? (
@@ -68,7 +70,7 @@ function Product({ id, title, price, description, category, image, rating }) {
 								displayType={'text'}
 								thousandSeparator={true}
 								prefix={'$'}
-								className='line-through text-gray-400'
+								className='line-through text-gray-400 '
 							/>
 						) : (
 							''

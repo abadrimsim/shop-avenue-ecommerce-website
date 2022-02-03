@@ -21,8 +21,8 @@ function Search({ data, keyword }) {
 		<div>
 			<Header />
 
-			<main className='max-w-screen-2xl mx-auto px-4'>
-				<h2 className='font-sans font-semibold text-2xl text-shop_ave mt-20 tracking-wider'>
+			<main className='max-w-screen-2xl mx-auto '>
+				<h2 className='font-heading text-2xl text-shop_ave mt-20 tracking-wide px-2 pb-14'>
 					{result.length} results for &quot;{keyword}&quot;
 				</h2>
 

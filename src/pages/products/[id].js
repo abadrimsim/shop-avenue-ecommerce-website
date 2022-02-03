@@ -42,7 +42,7 @@ function ProductItem({ singleProduct, allProducts }) {
 			<Header />
 			<main className='max-w-screen-2xl mx-auto'>
 				<div className='flex flex-col md:flex-row md:my-32 gap-10 font-sans tracking-wider leading-7 p-4'>
-					<div className='flex justify-center border-1 mx-auto hover:border-shop_ave-yellow duration-300 rounded cursor-crosshair w-full md:w-auto '>
+					<div className='flex justify-center border-1 mx-auto duration-300 rounded cursor-crosshair w-full md:w-auto '>
 						<div className='md:hidden'>
 							<Image
 								src={image}
@@ -63,36 +63,43 @@ function ProductItem({ singleProduct, allProducts }) {
 							/>
 						</div>
 					</div>
-					<div className='w-full md:w-2/4'>
-						<p className='text-gray-500 mb-3'>{category}</p>
-						<h3 className='text-3xl font-semibold mb-2'>{title}</h3>
-						<span className='flex gap-2 font-semibold'>
-							<p className='text-gray-400'>Availability:</p>
-							<p>In Stock</p>
-						</span>
+					<div className='w-full md:w-1/3'>
+						<h3 className='text-2xl font-heading mb-1'>{title}</h3>
+						<p className='text-gray-500 uppercase mb-1 text-xs'>{category}</p>
 
-						<hr className='text-gray-400 my-3' />
+						<div className='flex'>
+							{Array(rate)
+								.fill()
+								.map((_, i) => (
+									<StarIcon key={i} className='h-4 text-shop_ave' />
+								))}
+							{Array(ratingFiller)
+								.fill()
+								.map((_, i) => (
+									<StarIcon key={i} className='h-4 text-gray-300' />
+								))}
+						</div>
 
-						<p className='mb-3'>{description}</p>
-
-						<hr className='text-gray-400 my-3' />
-						<div className='justify-start font-semibold mb-16'>
-							<p className='text-gray-400'>Price:</p>
+						<div className='justify-start font-semibold mt-3'>
 							<NumberFormat
 								value={price}
 								displayType={'text'}
 								thousandSeparator={true}
 								prefix={'$'}
-								className='text-2xl'
 							/>
 						</div>
 
-						<div className='flex flex-row md:mt-5'>
-							<button onClick={addItemToCart} className='button ml-0 mr-5'>
+						<p className='text-sm border-y py-4 my-5'>{description}</p>
+
+						<div className='flex flex-row'>
+							<button
+								onClick={addItemToCart}
+								className='button text-sm ml-0 mr-2'
+							>
 								Add to Cart
 							</button>
 							<Link href={'/cart'} passHref>
-								<button onClick={addItemToCart} className='button'>
+								<button onClick={addItemToCart} className='button text-sm'>
 									Buy Now
 								</button>
 							</Link>
@@ -102,7 +109,7 @@ function ProductItem({ singleProduct, allProducts }) {
 
 				<hr className='text-gray-400' />
 
-				<h2 className='font-sans font-semibold text-2xl text-shop_ave mt-20 tracking-wider'>
+				<h2 className='font-heading text-2xl text-shop_ave my-20 tracking-wide text-center'>
 					More to Consider
 				</h2>
 				<div className='grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>

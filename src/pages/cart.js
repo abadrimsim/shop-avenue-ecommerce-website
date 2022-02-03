@@ -36,7 +36,7 @@ function Cart() {
 		<div>
 			<Header />
 
-			<main className='flex flex-col gap-5 md:flex-row max-w-screen-2xl mx-auto'>
+			<main className='flex flex-col gap-5 md:flex-row max-w-screen-2xl mx-auto my-24'>
 				{/* Left */}
 				<div className='flex-grow'>
 					<div className='flex flex-col p-4 space-y-10'>
@@ -83,7 +83,7 @@ function Cart() {
 								role='link'
 								onClick={createCheckoutSession}
 								disabled={!session}
-								className={`button w-full my-5 ml-0 ${
+								className={`button text-sm w-full my-5 ml-0 ${
 									!session &&
 									'bg-gray-200 text-gray-500 hover:ring-0 hover:bg-gray-200 hover:text-gray-500 cursor-not-allowed'
 								}`}
