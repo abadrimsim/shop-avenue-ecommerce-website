@@ -8,7 +8,7 @@ function Purchases({ orders }) {
 
 	return (
 		<div>
-			<main className='max-w-screen-lg mx-auto my-40 px-4 md:px-0'>
+			<main className='max-w-screen-lg mx-auto my-40 px-4 md:px-0 mb-[45vh]'>
 				<h1 className='text-2xl border-b pb-4 font-heading tracking-wide'>
 					{session
 						? `Your Purchases (${orders.length}) Orders`
