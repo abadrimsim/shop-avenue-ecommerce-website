@@ -1,18 +1,14 @@
 import moment from 'moment';
 import db from '../../firebase';
-import Header from '../components/Header';
 import PurchaseItem from '../components/PurchaseItem';
 import { useSession, getSession } from 'next-auth/react';
-import Footer from '../components/Footer';
 
 function Purchases({ orders }) {
 	const { data: session } = useSession();
 
 	return (
 		<div>
-			<Header />
-
-			<main className='max-w-screen-lg mx-auto pt-36 pb-10 px-4'>
+			<main className='max-w-screen-lg mx-auto my-40 px-4 md:px-0'>
 				<h1 className='text-2xl border-b pb-4 font-heading tracking-wide'>
 					{session
 						? `Your Purchases (${orders.length}) Orders`
@@ -35,8 +31,6 @@ function Purchases({ orders }) {
 					)}
 				</div>
 			</main>
-
-			<Footer />
 		</div>
 	);
 }

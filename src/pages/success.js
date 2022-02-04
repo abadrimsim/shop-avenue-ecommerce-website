@@ -1,14 +1,10 @@
-import Header from '../components/Header';
 import { CheckCircleIcon } from '@heroicons/react/solid';
 import { useRouter } from 'next/router';
-import Footer from '../components/Footer';
 
 function Success() {
 	const router = useRouter();
 	return (
 		<div>
-			<Header />
-
 			<main className='max-w-screen-lg mx-auto'>
 				<div className='flex flex-col p-10 text-center items-center'>
 					<div className='flex flex-col md:flex-row items-center space-x-2 mb-5'>
@@ -30,8 +26,6 @@ function Success() {
 					</button>
 				</div>
 			</main>
-
-			<Footer />
 		</div>
 	);
 }

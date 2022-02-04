@@ -37,7 +37,7 @@ function Header() {
 
 	return (
 		<header className='z-40 relative'>
-			<div className='fixed w-full'>
+			<div className='fixed top-0 w-full drop-shadow'>
 				<div className='bg-shop_ave-black text-center py-2'>
 					<h3 className='uppercase font-sans text-sm text-gray-400'>
 						30% off on your first purchase

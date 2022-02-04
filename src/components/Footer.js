@@ -2,16 +2,10 @@ import Image from 'next/image';
 
 function Footer() {
 	return (
-		<div className='mt-28 bg-shop_ave-black'>
+		<div className='static bottom-0 w-full mt-28 bg-shop_ave-black'>
 			<div className='flex flex-col md:flex-row py-14 px-4 max-w-screen-2xl mx-auto font-sans tracking-wider  text-white uppercase'>
 				<div className='flex-grow'>
 					<div className='flex items-center mt-5 mb-4 '>
-						{/* <Image
-							src='/shopave-logo-white.svg'
-							width={25}
-							height={25}
-							alt='Shop Avenue Logo'
-						/> */}
 						<h3 className='text-xl uppercase ml-2 font-bold font-heading'>
 							Shop Avenue
 						</h3>

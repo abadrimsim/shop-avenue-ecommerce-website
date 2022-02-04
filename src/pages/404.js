@@ -9,9 +9,7 @@ function PageNotFound() {
 
 	return (
 		<div>
-			<Header />
-
-			<main className='flex flex-col md:flex-row items-center justify-center gap-10 max-w-screen-2xl px-4 mx-auto my-32 font-sans tracking-wider'>
+			<main className='flex flex-col md:flex-row items-center justify-center gap-10 max-w-screen-2xl px-4 mx-auto  mt-48 mb-32 tracking-wide'>
 				<Image
 					src='/not-found.png'
 					width={400}
@@ -19,21 +17,19 @@ function PageNotFound() {
 					alt='Page Not Found'
 				/>
 				<div>
-					<h1 className='text-3xl font-bold mb-3'>Oops! Nothing here...</h1>
-					<p className='mb-4'>
+					<h1 className='text-xl font-heading mb-3'>Oops! Nothing here...</h1>
+					<p className='mb-4 font-sans text-sm'>
 						Sorry but the page you are looking for does not exist or is
 						temporarily unavailable.
 					</p>
 					<button
 						onClick={() => router.push('/')}
-						className='button w-1/3 ml-0'
+						className='button w-full md:w-1/3 text-xs ml-0'
 					>
 						Back to Homepage
 					</button>
 				</div>
 			</main>
-
-			<Footer />
 		</div>
 	);
 }

@@ -1,7 +1,5 @@
-import { StarIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import { useState } from 'react';
 import NumberFormat from 'react-number-format';
 

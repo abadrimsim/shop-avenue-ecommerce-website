@@ -1,9 +1,6 @@
 import Fuse from 'fuse.js';
 import { getSession } from 'next-auth/react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import Product from '../components/Product';
-import ProductFeed from '../components/ProductFeed';
 
 function Search({ data, keyword }) {
 	// Search if keyword exists from these object keys
@@ -19,10 +16,8 @@ function Search({ data, keyword }) {
 
 	return (
 		<div>
-			<Header />
-
-			<main className='max-w-screen-2xl mx-auto '>
-				<h2 className='font-heading text-2xl text-shop_ave mt-20 tracking-wide px-2 pb-14'>
+			<main className='mx-auto px-12 mb-[45vh]'>
+				<h2 className='font-heading text-2xl text-shop_ave mt-40 tracking-wide px-4 md:px-2 pb-14'>
 					{result.length} results for &quot;{keyword}&quot;
 				</h2>
 
@@ -42,8 +37,6 @@ function Search({ data, keyword }) {
 					))}
 				</div>
 			</main>
-
-			<Footer />
 		</div>
 	);
 }

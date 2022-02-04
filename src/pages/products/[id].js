@@ -1,11 +1,8 @@
 import Image from 'next/image';
-import Header from '../../components/Header';
-import { useState } from 'react';
 import NumberFormat from 'react-number-format';
 import { StarIcon } from '@heroicons/react/solid';
 import Zoom from 'react-img-zoom';
 import Product from '../../components/Product';
-import Footer from '../../components/Footer';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../slices/cartSlice';
 import Link from 'next/link';
@@ -39,10 +36,9 @@ function ProductItem({ singleProduct, allProducts }) {
 
 	return (
 		<div>
-			<Header />
-			<main className='max-w-screen-2xl mx-auto'>
-				<div className='flex flex-col md:flex-row gap-10 font-sans tracking-wider leading-7 p-4'>
-					<div className='flex justify-center border-1 mt-44 md:my-44 mx-auto duration-300 rounded cursor-crosshair w-full md:w-auto '>
+			<main className='mx-auto px-12'>
+				<div className='flex flex-col md:flex-row gap-10 mt-40 mb-32 font-sans tracking-wider leading-7 pt-4 px-36'>
+					<div className='flex justify-center border-1 mx-auto duration-300 rounded cursor-crosshair w-full md:w-auto '>
 						<div className='md:hidden'>
 							<Image
 								src={image}
@@ -63,8 +59,8 @@ function ProductItem({ singleProduct, allProducts }) {
 							/>
 						</div>
 					</div>
-					<div className='w-full md:w-1/3 md:my-44'>
-						<h3 className='text-2xl font-heading mb-1'>{title}</h3>
+					<div className='w-full md:w-1/3'>
+						<h3 className='text-xl md:text-2xl font-heading mb-1'>{title}</h3>
 						<p className='text-gray-500 uppercase mb-1 text-xs'>{category}</p>
 
 						<div className='flex'>
@@ -89,17 +85,19 @@ function ProductItem({ singleProduct, allProducts }) {
 							/>
 						</div>
 
-						<p className='text-sm border-y py-4 my-5'>{description}</p>
+						<p className='text-xs md:text-sm border-y py-4 my-5'>
+							{description}
+						</p>
 
 						<div className='flex flex-row'>
 							<button
 								onClick={addItemToCart}
-								className='button text-sm ml-0 mr-2'
+								className='button text-xs ml-0 mr-2'
 							>
 								Add to Cart
 							</button>
 							<Link href={'/cart'} passHref>
-								<button onClick={addItemToCart} className='button text-sm'>
+								<button onClick={addItemToCart} className='button text-xs'>
 									Buy Now
 								</button>
 							</Link>
@@ -137,8 +135,6 @@ function ProductItem({ singleProduct, allProducts }) {
 					/>
 				</div>
 			</main>
-
-			<Footer />
 		</div>
 	);
 }

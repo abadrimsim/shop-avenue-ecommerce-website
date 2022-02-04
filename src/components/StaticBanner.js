@@ -4,7 +4,7 @@ function StaticBanner() {
 	const router = useRouter();
 
 	return (
-		<div className="h-[100vh] md:h-[75vh] relative md:pl-10 bg-top bg-[url('https://i.ibb.co/BT6cVLk/shop-banner.jpg')]">
+		<div className="h-[100vh] md:h-[75vh] relative md:pl-10 bg-top bg-cover bg-[url('https://i.ibb.co/BT6cVLk/shop-banner.jpg')]">
 			<div className='absolute bottom-1/3 text-center'>
 				<h1 className='text-6xl md:text-8xl uppercase text-white font-heading drop-shadow-md'>
 					New Arrivals

@@ -1,7 +1,5 @@
 import { useSelector } from 'react-redux';
 import CartItem from '../components/CartItem';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import { selectItems, selectTotal } from '../slices/cartSlice';
 import NumberFormat from 'react-number-format';
 import Image from 'next/image';
@@ -34,10 +32,8 @@ function Cart() {
 
 	return (
 		<>
-			<Header />
-
 			<div>
-				<main className='flex flex-col gap-5 md:flex-row max-w-screen-2xl z-0 mx-auto pt-40 pb-24'>
+				<main className='flex flex-col gap-5 md:flex-row z-0 mx-auto pt-40 pb-24 px-12 mb-[45vh]'>
 					{/* Left */}
 					<div className='flex-grow'>
 						<div className='flex flex-col p-4 space-y-10'>
@@ -103,8 +99,6 @@ function Cart() {
 						)}
 					</div>
 				</main>
-
-				<Footer />
 			</div>
 		</>
 	);

@@ -1,10 +1,6 @@
 import { getSession } from 'next-auth/react';
 import Head from 'next/head';
-import Image from 'next/image';
-import Banner from '../components/Banner';
 import Categories from '../components/Categories';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import ProductFeed from '../components/ProductFeed';
 import StaticBanner from '../components/StaticBanner';
 
@@ -16,15 +12,11 @@ export default function Home({ data }) {
 				<link rel='shortcut icon' href='/shopave-logo-round.ico' />
 			</Head>
 
-			<Header />
-
 			<main className='mx-auto px-2'>
 				<StaticBanner />
 				<Categories />
 				<ProductFeed key={data.id} products={data} />
 			</main>
-
-			<Footer />
 		</div>
 	);
 }
