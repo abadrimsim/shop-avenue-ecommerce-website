@@ -5,7 +5,7 @@ function Success() {
 	const router = useRouter();
 	return (
 		<div>
-			<main className='max-w-screen-lg mx-auto mb-[45vh]'>
+			<main className='max-w-screen-lg mx-auto mb-[48vh]'>
 				<div className='flex flex-col p-10 text-center items-center'>
 					<div className='flex flex-col md:flex-row items-center space-x-2 mb-5'>
 						<CheckCircleIcon className='text-green-500 h-10' />

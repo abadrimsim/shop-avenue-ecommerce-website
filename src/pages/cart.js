@@ -33,7 +33,7 @@ function Cart() {
 	return (
 		<>
 			<div>
-				<main className='flex flex-col gap-5 md:flex-row z-0 mx-auto pt-40 pb-24 px-12 mb-[45vh]'>
+				<main className='flex flex-col gap-5 md:flex-row z-0 mx-auto pt-40 pb-24 px-12 mb-[48vh]'>
 					{/* Left */}
 					<div className='flex-grow'>
 						<div className='flex flex-col p-4 space-y-10'>

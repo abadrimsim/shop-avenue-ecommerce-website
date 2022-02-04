@@ -9,7 +9,7 @@ function PageNotFound() {
 
 	return (
 		<div>
-			<main className='flex flex-col md:flex-row items-center justify-center gap-10 max-w-screen-2xl px-4 mx-auto  mt-48 mb-32 tracking-wide'>
+			<main className='flex flex-col md:flex-row items-center justify-center gap-10 max-w-screen-2xl px-4 mx-auto mt-48 mb-[48vh] tracking-wide'>
 				<Image
 					src='/not-found.png'
 					width={400}
