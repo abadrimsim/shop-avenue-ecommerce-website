@@ -12,8 +12,8 @@ function Purchases({ orders }) {
 		<div>
 			<Header />
 
-			<main className='max-w-screen-lg mx-auto p-10'>
-				<h1 className='text-2xl border-b pb-4 font-sans tracking-wider font-semibold '>
+			<main className='max-w-screen-lg mx-auto pt-36 pb-10 px-4'>
+				<h1 className='text-2xl border-b pb-4 font-heading tracking-wide'>
 					{session
 						? `Your Purchases (${orders.length}) Orders`
 						: `Please sign in to see your orders.`}

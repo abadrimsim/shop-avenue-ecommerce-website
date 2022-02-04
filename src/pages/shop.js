@@ -1,33 +1,25 @@
-import { getSession } from 'next-auth/react';
-import Head from 'next/head';
-import Image from 'next/image';
-import Banner from '../components/Banner';
-import Categories from '../components/Categories';
+import AllProducts from '../components/AllProducts';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import ProductFeed from '../components/ProductFeed';
 import StaticBanner from '../components/StaticBanner';
+import { getSession } from 'next-auth/react';
 
-export default function Home({ data }) {
+function Shop({ data }) {
 	return (
 		<div className='bg-white text-gray-600'>
-			<Head>
-				<title>Welcome to Shop Avenue</title>
-				<link rel='shortcut icon' href='/shopave-logo-round.ico' />
-			</Head>
-
 			<Header />
 
 			<main className='mx-auto px-2'>
 				<StaticBanner />
-				<Categories />
-				<ProductFeed key={data.id} products={data} />
+				<AllProducts key={data.id} products={data} />
 			</main>
 
 			<Footer />
 		</div>
 	);
 }
+
+export default Shop;
 
 export async function getServerSideProps(context) {
 	const session = await getSession(context);

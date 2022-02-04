@@ -1,7 +1,7 @@
 import moment from 'moment';
 import Image from 'next/image';
 import NumberFormat from 'react-number-format';
-import { TruckIcon } from '@heroicons/react/solid';
+import { TruckIcon } from '@heroicons/react/outline';
 
 function PurchaseItem({
 	id,
@@ -14,24 +14,22 @@ function PurchaseItem({
 	const str = id.substring(10, 20);
 
 	return (
-		<div className='relative border rounded-md'>
-			<div className='flex items-center space-x-10 px-3 py-2 border-b text-sm text-gray-600 font-sans tracking-wider'>
-				<h2 className='grow text-sm md:text-lg font-semibold text-shop_ave'>
-					<TruckIcon className='h-6 pb-1 mr-2 hidden md:inline' /> Shipping{' '}
-					{items.length} item/s
+		<div className='border my-10'>
+			<div className='flex items-center space-x-10 px-3 py-3 border-b text-xs uppercase text-gray-600 font-sans tracking-wide'>
+				<h2 className='grow text-shop_ave'>
+					<TruckIcon className='h-6 pb-1 mr-2 hidden text-gray-500 md:inline' />{' '}
+					Shipping {items.length} item/s
 				</h2>
 				<div className='grow hidden md:flex'>
-					<p className='font-semibold text-sm text-shop_ave mr-1'>
-						Order placed on:
-					</p>
-					<p className='font-semibold text-sm text-gray-400'>
+					<p className='text-shop_ave mr-1'>Order placed on:</p>
+					<p className='text-black'>
 						{moment.unix(timestamp).format('MM/DD/YYYY')}
 					</p>
 				</div>
 
 				<div className='grow hidden md:flex'>
-					<p className='font-semibold text-sm text-shop_ave mr-1'>Total: </p>
-					<p className='font-semibold text-sm text-gray-400'>
+					<p className='text-shop_ave mr-1'>Total: </p>
+					<p className='text-black'>
 						<NumberFormat
 							value={amount}
 							displayType={'text'}
@@ -42,11 +40,11 @@ function PurchaseItem({
 				</div>
 
 				<div className='relative justify-self-end text-right'>
-					<p className='font-semibold text-sm text-shop_ave'>Order# {str}</p>
+					<p className='text-shop_ave'>Order# {str}</p>
 				</div>
 			</div>
 
-			<div className='p-3 sm:p-10'>
+			<div className='p-5 sm:p-10'>
 				<div className='flex gap-3 space-x-6 overflow-x-auto'>
 					{images.map((image, i) => (
 						<Image

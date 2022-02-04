@@ -18,7 +18,7 @@ function Product({ id, title, price, description, category, image, rating }) {
 	return (
 		<Link href={`/products/${id}`} key={id} passHref>
 			<div className='flex flex-col z-30 p-4 my-2 mb:my-5 cursor-pointer'>
-				<div className='mx-auto duration-200 rounded relative'>
+				<div className='mx-auto duration-200 rounded relative hover:opacity-90 hover:scale-105'>
 					<Image
 						src={image}
 						height={400}
@@ -41,19 +41,6 @@ function Product({ id, title, price, description, category, image, rating }) {
 					<p className='font-sans text-gray-400 uppercase text-xs tracking-wider'>
 						{category}
 					</p>
-
-					{/* <div className='flex'>
-						{Array(rate)
-							.fill()
-							.map((_, i) => (
-								<StarIcon key={i} className='h-4 text-shop_ave-tan' />
-							))}
-						{Array(ratingFiller)
-							.fill()
-							.map((_, i) => (
-								<StarIcon key={i} className='h-4 text-gray-300' />
-							))}
-					</div> */}
 
 					<div className='flex mt-3 mb-2 font-sans tracking-wider text-sm'>
 						<NumberFormat

@@ -1,13 +1,9 @@
 import Product from './Product';
-import Image from 'next/image';
 
-function ProductFeed({ products }) {
+function AllProducts({ products }) {
 	return (
 		<>
-			<h2 className='font-heading text-2xl text-shop_ave my-16 tracking-wide text-center'>
-				Featured Products
-			</h2>
-			<div className='grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-10'>
+			<div className='grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-10 mt-16'>
 				{products
 					.slice(0, 4)
 					.map(({ id, title, price, description, category, image, rating }) => (
@@ -25,7 +21,7 @@ function ProductFeed({ products }) {
 
 				<img
 					className='md:col-span-full my-12'
-					src='/advertisement-3.jpg'
+					src='/advertisement-1.jpg'
 					alt='Advertisement Banner'
 				/>
 
@@ -34,7 +30,7 @@ function ProductFeed({ products }) {
 				</h2>
 
 				{products
-					.slice(4, 8)
+					.slice(4, products.length)
 					.map(({ id, title, price, description, category, image, rating }) => (
 						<Product
 							key={id}
@@ -52,4 +48,4 @@ function ProductFeed({ products }) {
 	);
 }
 
-export default ProductFeed;
+export default AllProducts;
