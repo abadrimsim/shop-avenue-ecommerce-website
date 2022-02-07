@@ -1,10 +1,6 @@
 module.exports = {
 	mode: 'jit',
-	content: [
-		'./src/pages/*.{js,ts,jsx,tsx}',
-		'./src/pages/**/*.{js,ts,jsx,tsx}',
-		'./src/components/*.{js,ts,jsx,tsx}',
-	],
+	content: ['./src/pages/*.js', './src/pages/**/*.js', './src/components/*.js'],
 	darkMode: true,
 	theme: {
 		extend: {
