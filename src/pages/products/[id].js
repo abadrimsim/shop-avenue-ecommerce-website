@@ -37,7 +37,7 @@ function ProductItem({ singleProduct, allProducts }) {
 	return (
 		<div>
 			<main className='mx-auto px-12'>
-				<div className='flex flex-col md:flex-row gap-10 mt-40 mb-32 font-sans tracking-wider leading-7 pt-4 px-36'>
+				<div className='flex flex-col md:flex-row gap-10 mt-40 mb-32 font-sans tracking-wider leading-7 pt-4 md:px-36'>
 					<div className='flex justify-center border-1 mx-auto duration-300 rounded cursor-crosshair w-full md:w-auto '>
 						<div className='md:hidden'>
 							<Image
