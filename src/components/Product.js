@@ -36,7 +36,7 @@ function Product({ id, title, price, description, category, image, rating }) {
 					<h4 className=' mt-5 font-sans uppercase tracking-wider text-sm text-shop_ave-black'>
 						{title}
 					</h4>
-					<p className='font-sans text-gray-400 uppercase text-xs tracking-wider'>
+					<p className='font-sans text-shop_ave-tan uppercase text-xs tracking-wider'>
 						{category}
 					</p>
 

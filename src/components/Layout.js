@@ -5,7 +5,7 @@ function Layout({ children }) {
 	return (
 		<div>
 			<Header />
-			{children}
+			<div className='my-auto min-h-[60vh]'>{children}</div>
 			<Footer />
 		</div>
 	);

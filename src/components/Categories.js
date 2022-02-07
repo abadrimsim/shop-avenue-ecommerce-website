@@ -5,7 +5,9 @@ function Categories() {
 		<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-16'>
 			<div className='relative'>
 				<Image
-					src='https://i.ibb.co/ZRQLz99/category-1.jpg'
+					src='/category-1.jpg'
+					blurDataURL='/category-1-blur.jpg'
+					placeholder='blur'
 					width={500}
 					height={700}
 					objectFit='cover'
@@ -18,7 +20,9 @@ function Categories() {
 			</div>
 			<div className='relative'>
 				<Image
-					src='https://i.ibb.co/hLB7Ctk/category-2.jpg'
+					src='/category-2.jpg'
+					blurDataURL='/category-2-blur.jpg'
+					placeholder='blur'
 					width={500}
 					height={700}
 					objectFit='cover'
@@ -31,7 +35,9 @@ function Categories() {
 			</div>
 			<div className='relative'>
 				<Image
-					src='https://i.ibb.co/kcvzwNP/category-3.jpg'
+					src='/category-3.jpg'
+					blurDataURL='/category-3-blur.jpg'
+					placeholder='blur'
 					width={500}
 					height={700}
 					objectFit='cover'
@@ -44,7 +50,9 @@ function Categories() {
 			</div>
 			<div className='relative'>
 				<Image
-					src='https://i.ibb.co/Xx6Q2Fm/category-4.jpg'
+					src='/category-4.jpg'
+					blurDataURL='/category-4-blur.jpg'
+					placeholder='blur'
 					width={500}
 					height={700}
 					objectFit='cover'

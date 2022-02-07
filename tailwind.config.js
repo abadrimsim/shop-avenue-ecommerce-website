@@ -9,16 +9,13 @@ module.exports = {
 		extend: {
 			colors: {
 				shop_ave: {
-					yellow: '#FFCC00',
-					tan: '#e2b982',
+					tan: '#d4af87',
 					black: '#101016',
 					DEFAULT: '#333333',
 				},
 			},
 			fontFamily: {
-				// sans: ['Encode Sans Condensed', 'sans-serif'],
 				sans: ['Red Hat Display', 'sans-serif'],
-				// heading: ['Playfair Display', 'serif'],
 				heading: ['Lora', 'serif'],
 			},
 			screens: {

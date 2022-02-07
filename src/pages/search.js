@@ -16,7 +16,7 @@ function Search({ data, keyword }) {
 
 	return (
 		<div>
-			<main className='mx-auto px-12 mb-[48vh]'>
+			<main className='mx-auto px-12'>
 				<h2 className='font-heading text-2xl text-shop_ave mt-40 tracking-wide px-4 md:px-2 pb-14'>
 					{result.length} results for &quot;{keyword}&quot;
 				</h2>

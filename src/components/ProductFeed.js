@@ -25,7 +25,7 @@ function ProductFeed({ products }) {
 
 				<img
 					className='md:col-span-full my-12'
-					src='/advertisement-3.jpg'
+					src='/advertisement-1.jpg'
 					alt='Advertisement Banner'
 				/>
 

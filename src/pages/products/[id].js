@@ -67,7 +67,7 @@ function ProductItem({ singleProduct, allProducts }) {
 							{Array(rate)
 								.fill()
 								.map((_, i) => (
-									<StarIcon key={i} className='h-4 text-shop_ave' />
+									<StarIcon key={i} className='h-4 text-shop_ave-tan' />
 								))}
 							{Array(ratingFiller)
 								.fill()
@@ -130,7 +130,7 @@ function ProductItem({ singleProduct, allProducts }) {
 
 					<img
 						className='md:col-span-full'
-						src='/advertisement-1.jpg'
+						src='/advertisement-2.jpg'
 						alt='Advertisement Banner'
 					/>
 				</div>

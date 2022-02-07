@@ -9,11 +9,14 @@ function PageNotFound() {
 
 	return (
 		<div>
-			<main className='flex flex-col md:flex-row items-center justify-center gap-10 max-w-screen-2xl px-4 mx-auto mt-48 mb-[48vh] tracking-wide'>
+			<main className='flex flex-col md:flex-row items-center justify-center gap-10 max-w-screen-2xl px-4 mx-auto mt-48 tracking-wide'>
 				<Image
-					src='/not-found.png'
-					width={400}
+					src='/not-found.jpg'
+					blurDataURL='/not-found-blur.jpg'
+					placeholder='blur'
+					width={500}
 					height={400}
+					objectFit='contain'
 					alt='Page Not Found'
 				/>
 				<div>

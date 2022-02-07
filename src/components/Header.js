@@ -39,7 +39,7 @@ function Header() {
 		<header className='z-40 relative'>
 			<div className='fixed top-0 w-full drop-shadow'>
 				<div className='bg-shop_ave-black text-center py-2'>
-					<h3 className='uppercase font-sans text-sm text-gray-400'>
+					<h3 className='uppercase font-sans text-xs text-gray-200'>
 						30% off on your first purchase
 					</h3>
 				</div>
@@ -70,28 +70,25 @@ function Header() {
 							className='mr-3 md:mr-0'
 						>
 							<MenuIcon
-								className='text-base text-gray-300'
+								className='text-base text-gray-500'
 								width={25}
 								height={25}
 							/>
 						</Navbar.Toggle>
 
-						<Navbar.Collapse
-							id='responsive-navbar-nav '
-							className='font-sans uppercase text-xs mx-2 md:mx-5'
-						>
+						<Navbar.Collapse id='responsive-navbar-nav '>
 							<Nav className='me-auto'>
 								<Nav.Link>
-									<p className='mr-3'>What&#39;s New</p>
+									<p className='link'>What&#39;s New</p>
 								</Nav.Link>
 								<Nav.Link>
-									<p className='mr-3'>Apparel</p>
+									<p className='link'>Apparel</p>
 								</Nav.Link>
 								<Nav.Link>
-									<p className='mr-3'>Accessories</p>
+									<p className='link'>Accessories</p>
 								</Nav.Link>
 								<Nav.Link>
-									<p className='mr-3'>Electronics</p>
+									<p className='link'>Electronics</p>
 								</Nav.Link>
 							</Nav>
 
@@ -107,30 +104,24 @@ function Header() {
 									/>
 									<SearchIcon
 										onClick={handleSearch}
-										className='hidden lg:block h-6 mx-1 mt-2.5 cursor-pointer text-gray-500'
+										className='hidden lg:block nav-icon h-6 mx-1 mt-2.5'
 									/>
 								</Form>
 
 								<Nav.Link onClick={() => router.push('/cart')} className='py-1'>
-									<p className='font-sans tracking-wide md:hidden text-left hover:text-shop_ave'>
-										Shopping Cart
-									</p>
-									<div className='relative mt-2 hidden md:flex items-center font-sans text-gray-400 font-semibold tracking-wide hover:text-shop_ave'>
+									<p className='link md:hidden'>Shopping Cart</p>
+									<div className='relative mt-2 hidden md:flex items-center'>
 										<span className='absolute -bottom-2 left-4 h-4 w-4 bg-shop_ave-black text-center rounded-full text-white text-xs'>
 											{items.length}
 										</span>
-										<ShoppingBagIcon className='nav-icon text-gray-500' />
+										<ShoppingBagIcon className='nav-icon' />
 									</div>
 								</Nav.Link>
 
 								{session && (
 									<Nav.Link onClick={() => router.push('/purchases')}>
-										<p className='font-sans tracking-wide md:hidden text-left hover:text-shop_ave'>
-											My Purchases
-										</p>
-										<div className='relative mt-1 hidden md:flex items-center font-sans text-gray-400 font-semibold tracking-wide hover:text-shop_ave'>
-											<CollectionIcon className='hidden md:block nav-icon text-gray-500' />
-										</div>
+										<p className='link md:hidden'>My Purchases</p>
+										<CollectionIcon className='hidden md:block nav-icon mt-1' />
 									</Nav.Link>
 								)}
 
@@ -138,7 +129,7 @@ function Header() {
 									onClick={!session ? signIn : signOut}
 									className='py-1'
 								>
-									<p className='font-sans tracking-wide md:hidden text-left hover:text-shop_ave'>
+									<p className='link md:hidden'>
 										{session ? `Logged in as ${session.user.name}` : 'Sign In'}
 									</p>
 									<div className='hidden mt-1 md:block'>
@@ -151,7 +142,7 @@ function Header() {
 												alt={session.user.name}
 											/>
 										) : (
-											<UserCircleIcon className='nav-icon text-gray-500 mt-2' />
+											<UserCircleIcon className='nav-icon mt-2' />
 										)}
 									</div>
 								</Nav.Link>
