@@ -1,6 +1,6 @@
 # Shop Avenue Ecommerce Website
 
-![Logo](https://i.ibb.co/SmShYC9/shopave-prev.png)
+![Logo](https://i.ibb.co/Q8kcbyt/shopave-prev.png)
 
 ## Description
 
